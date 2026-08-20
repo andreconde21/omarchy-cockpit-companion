@@ -2,6 +2,8 @@
 
 Read-only Omarchy bar widget for an Obsidian task vault.
 
+![Preview](preview.png)
+
 ## What it does
 
 - Shows a compact week view that can expand to a month grid
