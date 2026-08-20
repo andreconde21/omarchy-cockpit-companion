@@ -27,7 +27,7 @@
   <text x="712" y="18" fill="#2e3841" font-family="monospace" font-size="13">Thu 20 Aug 22:09</text>
   <text x="1298" y="18" fill="#2e3841" font-family="monospace" font-size="13">〈  •1  ◫  ⌁2  ♫  ⌂  ⋀  ≋  ◧  🔋</text>
 
-  <rect x="1120" y="44" width="430" height="556" fill="#30383f" stroke="#9fd8dc" stroke-width="2"/>
+  <rect x="1120" y="44" width="430" height="672" fill="#30383f" stroke="#9fd8dc" stroke-width="2"/>
 
   <text x="1142" y="80" fill="#f08b84" font-family="monospace" font-size="24">☷</text>
   <text x="1188" y="80" fill="#e3dcc9" font-family="monospace" font-size="16" font-weight="700">Cockpit</text>
@@ -95,5 +95,5 @@
   <rect x="1140" y="660" width="144" height="5" fill="#ead9b7"/>
   <text x="1140" y="684" fill="#9f9581" font-family="monospace" font-size="12">2 done · 2 open</text>
 
-  <text x="1182" y="742" fill="#a7997b" font-family="monospace" font-size="12">Read-only · /path/to/cockpit-board-vault</text>
+  <text x="1182" y="692" fill="#a7997b" font-family="monospace" font-size="12">Read-only · /path/to/cockpit-board-vault</text>
 </svg>
