@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "andreconde.cockpit",
-  "name": "Cockpit Companion",
+  "name": "Cockpit Board Companion",
   "version": "1.2.1",
   "author": "André Conde",
   "license": "MIT",
-  "description": "Read-only companion for an Obsidian tasks vault: a week-first schedule expandable to the full month, the selected day's tasks in board order with expandable note bodies, overdue tasks, configurable checklist progress meters, and a task-attached pomodoro timer that stays hidden while idle. Never writes to the vault.",
+  "description": "Read-only Omarchy companion for the Obsidian cockpit-board plugin: a week-first schedule expandable to the full month, the selected day's tasks in cockpit-board order with expandable note bodies, overdue tasks, configurable checklist progress meters, and a task-attached pomodoro timer that stays hidden while idle. Never writes to the vault.",
   "kinds": [
     "bar-widget"
   ],
@@ -14,12 +14,12 @@
     "barWidget": "Panel.qml"
   },
   "barWidget": {
-    "displayName": "Cockpit",
-    "description": "Obsidian vault tasks on a week-first schedule (expandable to the month grid) with a per-day task list, overdue badge, configurable checklist meters, and a task-attached pomodoro timer. Never writes to the vault.",
+    "displayName": "Cockpit Board",
+    "description": "Read-only companion for the Obsidian cockpit-board plugin, showing its task vault on a week-first schedule with per-day tasks, overdue badge, checklist meters, and a task-attached pomodoro timer.",
     "category": "Productivity",
     "aliases": [
       "cockpit",
-      "obsidian-tasks"
+      "cockpit-board"
     ],
     "allowMultiple": false,
     "defaults": {
@@ -33,16 +33,16 @@
       {
         "key": "vaultDir",
         "type": "path",
-        "label": "Obsidian vault folder",
+        "label": "cockpit-board vault folder",
         "defaultValue": "~/Obsidian",
-        "description": "Vault root containing Tasks/Active. The plugin only ever reads it."
+        "description": "Vault root containing the cockpit-board task files in Tasks/Active. The plugin only ever reads it."
       },
       {
         "key": "checklistPatterns",
         "type": "string",
         "label": "Checklist meters (filename patterns)",
         "defaultValue": "",
-        "description": "Comma-separated filename globs matched in Tasks/Active (e.g. \"weekly-review*,launch-plan\"; .md is implied). Each pattern shows a checkbox progress meter for its newest matching file. Empty hides the section."
+        "description": "Comma-separated filename globs matched in Tasks/Active (e.g. \"weekly-review*,launch-plan\"; .md is implied). Each pattern shows a checkbox progress meter for its newest matching cockpit-board task file. Empty hides the section."
       },
       {
         "key": "refreshIntervalSec",

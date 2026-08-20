@@ -7,8 +7,8 @@
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
   <rect x="360" y="90" width="880" height="720" rx="28" fill="#0b1220" stroke="#334155" stroke-width="2"/>
-  <text x="420" y="150" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Cockpit</text>
-  <text x="420" y="185" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">Read-only Obsidian task vault companion</text>
+  <text x="420" y="150" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Cockpit Board</text>
+  <text x="420" y="185" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">Read-only companion for the Obsidian cockpit-board plugin</text>
 
   <rect x="420" y="220" width="760" height="68" rx="18" fill="#111827" stroke="#1f2937"/>
   <text x="450" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Mon 12</text>
