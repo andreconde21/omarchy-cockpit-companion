@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "andreconde.cockpit",
+  "name": "Cockpit Companion",
+  "version": "1.2.1",
+  "author": "André Conde",
+  "license": "MIT",
+  "description": "Read-only companion for an Obsidian tasks vault: a week-first schedule expandable to the full month, the selected day's tasks in board order with expandable note bodies, overdue tasks, configurable checklist progress meters, and a task-attached pomodoro timer that stays hidden while idle. Never writes to the vault.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "activation": "on-demand",
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Cockpit",
+    "description": "Obsidian vault tasks on a week-first schedule (expandable to the month grid) with a per-day task list, overdue badge, configurable checklist meters, and a task-attached pomodoro timer. Never writes to the vault.",
+    "category": "Productivity",
+    "aliases": [
+      "cockpit",
+      "obsidian-tasks"
+    ],
+    "allowMultiple": false,
+    "defaults": {
+      "vaultDir": "~/Obsidian",
+      "refreshIntervalSec": 60,
+      "workMinutes": 25,
+      "breakMinutes": 5,
+      "checklistPatterns": ""
+    },
+    "schema": [
+      {
+        "key": "vaultDir",
+        "type": "path",
+        "label": "Obsidian vault folder",
+        "defaultValue": "~/Obsidian",
+        "description": "Vault root containing Tasks/Active. The plugin only ever reads it."
+      },
+      {
+        "key": "checklistPatterns",
+        "type": "string",
+        "label": "Checklist meters (filename patterns)",
+        "defaultValue": "",
+        "description": "Comma-separated filename globs matched in Tasks/Active (e.g. \"weekly-review*,launch-plan\"; .md is implied). Each pattern shows a checkbox progress meter for its newest matching file. Empty hides the section."
+      },
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Vault rescan interval (seconds)",
+        "min": 15,
+        "max": 3600,
+        "step": 15,
+        "defaultValue": 60
+      },
+      {
+        "key": "autoCloseSec",
+        "type": "integer",
+        "label": "Auto-close panel after inactivity (seconds)",
+        "min": 30,
+        "max": 145,
+        "step": 5,
+        "defaultValue": 120,
+        "description": "Closes an unattended panel before the shell's 150s idle screensaver can fire while it holds keyboard focus."
+      },
+      {
+        "key": "workMinutes",
+        "type": "integer",
+        "label": "Pomodoro work minutes (fallback)",
+        "min": 5,
+        "max": 120,
+        "step": 5,
+        "defaultValue": 25,
+        "description": "Used only when the vault's cockpit-board pomodoro settings cannot be read."
+      },
+      {
+        "key": "breakMinutes",
+        "type": "integer",
+        "label": "Pomodoro break minutes (fallback)",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 5,
+        "description": "Used only when the vault's cockpit-board pomodoro settings cannot be read."
+      }
+    ]
+  }
+}
