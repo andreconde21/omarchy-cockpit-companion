@@ -1,53 +1,100 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#111827"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8beb6"/>
+      <stop offset="100%" stop-color="#8d948d"/>
+    </linearGradient>
+    <linearGradient id="fog" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d3d7d2" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#9da49f" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="forest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#465058"/>
+      <stop offset="100%" stop-color="#1f2931"/>
     </linearGradient>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg)"/>
-  <rect x="360" y="90" width="880" height="720" rx="28" fill="#0b1220" stroke="#334155" stroke-width="2"/>
-  <text x="420" y="150" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Cockpit Board</text>
-  <text x="420" y="185" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">Read-only companion for the Obsidian cockpit-board plugin</text>
 
-  <rect x="420" y="220" width="760" height="68" rx="18" fill="#111827" stroke="#1f2937"/>
-  <text x="450" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Mon 12</text>
-  <text x="555" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Tue 13</text>
-  <rect x="645" y="232" width="94" height="42" rx="14" fill="#2563eb"/>
-  <text x="668" y="260" fill="#eff6ff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Wed 14</text>
-  <text x="775" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Thu 15</text>
-  <text x="885" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Fri 16</text>
-  <text x="985" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Sat 17</text>
-  <text x="1085" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Sun 18</text>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <ellipse cx="540" cy="250" rx="620" ry="140" fill="url(#fog)"/>
+  <ellipse cx="920" cy="320" rx="520" ry="120" fill="url(#fog)"/>
+  <path d="M0 640 C120 600 210 565 330 545 C470 520 620 535 760 495 C915 450 1040 375 1210 360 C1360 346 1475 392 1600 450 L1600 900 L0 900 Z" fill="#3f4951"/>
+  <path d="M0 700 C140 645 265 628 410 612 C560 595 710 622 860 575 C1020 525 1135 438 1290 432 C1420 426 1510 470 1600 535 L1600 900 L0 900 Z" fill="url(#forest)"/>
+  <path d="M260 535 C360 555 420 592 500 648 C542 678 598 720 645 736 C710 758 790 742 850 704 C786 706 746 688 694 651 C620 596 576 552 506 528 C440 506 365 510 260 535 Z" fill="#c8cdca" fill-opacity="0.12"/>
+  <path d="M850 412 C930 438 1008 498 1068 586 C1020 565 979 568 927 545 C884 525 852 485 838 448 C832 432 834 420 850 412 Z" fill="#d6dbd6" fill-opacity="0.14"/>
 
-  <text x="420" y="332" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Today</text>
-  <text x="520" y="332" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="18">3 due today</text>
+  <rect x="0" y="0" width="1600" height="26" fill="#a9afa8" fill-opacity="0.18"/>
+  <text x="18" y="18" fill="#2e3841" font-family="monospace" font-size="13">◫  1  2  3  4  5  9      ◉  A Simple Mistake</text>
+  <text x="712" y="18" fill="#2e3841" font-family="monospace" font-size="13">Thu 20 Aug 22:09</text>
+  <text x="1298" y="18" fill="#2e3841" font-family="monospace" font-size="13">〈  •1  ◫  ⌁2  ♫  ⌂  ⋀  ≋  ◧  🔋</text>
 
-  <rect x="420" y="356" width="760" height="96" rx="18" fill="#111827" stroke="#1f2937"/>
-  <text x="448" y="392" fill="#38bdf8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">09:30</text>
-  <text x="530" y="392" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Client follow-up notes</text>
-  <text x="530" y="424" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16">Ops | 2 pomodoros | 45m logged</text>
-  <text x="530" y="447" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="15">Confirm open questions, capture blockers, and prep the handoff note.</text>
+  <rect x="1120" y="44" width="430" height="556" fill="#30383f" stroke="#9fd8dc" stroke-width="2"/>
+  <rect x="1534" y="44" width="66" height="64" fill="#30383f" stroke="#9fd8dc" stroke-width="2"/>
 
-  <rect x="420" y="468" width="760" height="96" rx="18" fill="#111827" stroke="#1f2937"/>
-  <text x="448" y="504" fill="#38bdf8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">11:00</text>
-  <text x="530" y="504" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Marketplace submission polish</text>
-  <text x="530" y="536" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16">Publishing | 1 pomodoro | 20m logged</text>
-  <text x="530" y="559" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="15">Validate manifest, add preview image, and post maintainer notes.</text>
+  <text x="1142" y="80" fill="#f08b84" font-family="monospace" font-size="24">☷</text>
+  <text x="1188" y="80" fill="#e3dcc9" font-family="monospace" font-size="16" font-weight="700">Cockpit</text>
+  <text x="1188" y="104" fill="#b9ad8d" font-family="monospace" font-size="11" letter-spacing="2">THU 20 AUGUST · 2 TODAY · 1 OVERDUE</text>
+  <rect x="1450" y="64" width="83" height="34" fill="none" stroke="#7f8583" stroke-width="1"/>
+  <text x="1465" y="86" fill="#d7cfbf" font-family="monospace" font-size="12">Obsidian</text>
 
-  <rect x="420" y="580" width="760" height="96" rx="18" fill="#111827" stroke="#1f2937"/>
-  <text x="448" y="616" fill="#fb7185" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">OVERDUE</text>
-  <text x="530" y="616" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Weekly review cleanup</text>
-  <text x="530" y="648" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16">Planning | 0 pomodoros</text>
-  <text x="530" y="671" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="15">Archive completed items and re-sequence the backlog.</text>
+  <line x1="1138" y1="118" x2="1532" y2="118" stroke="#52595d" stroke-width="1"/>
 
-  <text x="420" y="726" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Checklist meters</text>
-  <text x="420" y="764" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="17">Weekly review</text>
-  <rect x="590" y="748" width="390" height="16" rx="8" fill="#1f2937"/>
-  <rect x="590" y="748" width="285" height="16" rx="8" fill="#22c55e"/>
-  <text x="1000" y="764" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15">15 / 20 done</text>
-  <text x="420" y="798" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="17">Launch plan</text>
-  <rect x="590" y="782" width="390" height="16" rx="8" fill="#1f2937"/>
-  <rect x="590" y="782" width="190" height="16" rx="8" fill="#38bdf8"/>
-  <text x="1000" y="798" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15">8 / 17 done</text>
+  <rect x="1140" y="132" width="26" height="26" fill="none" stroke="#7f8583" stroke-width="1"/>
+  <text x="1149" y="150" fill="#d7cfbf" font-family="monospace" font-size="16">‹</text>
+  <rect x="1468" y="132" width="26" height="26" fill="none" stroke="#7f8583" stroke-width="1"/>
+  <text x="1477" y="150" fill="#d7cfbf" font-family="monospace" font-size="16">›</text>
+  <rect x="1502" y="132" width="26" height="26" fill="none" stroke="#7f8583" stroke-width="1"/>
+  <text x="1508" y="150" fill="#d7cfbf" font-family="monospace" font-size="15">⌄</text>
+  <text x="1268" y="150" fill="#dacda9" font-family="monospace" font-size="13" font-weight="700">AUGUST 2026</text>
+
+  <text x="1158" y="179" fill="#9e9478" font-family="monospace" font-size="11">Mo</text>
+  <text x="1213" y="179" fill="#9e9478" font-family="monospace" font-size="11">Tu</text>
+  <text x="1264" y="179" fill="#9e9478" font-family="monospace" font-size="11">We</text>
+  <text x="1317" y="179" fill="#9e9478" font-family="monospace" font-size="11">Th</text>
+  <text x="1368" y="179" fill="#9e9478" font-family="monospace" font-size="11">Fr</text>
+  <text x="1419" y="179" fill="#9e9478" font-family="monospace" font-size="11">Sa</text>
+  <text x="1471" y="179" fill="#9e9478" font-family="monospace" font-size="11">Su</text>
+
+  <text x="1158" y="220" fill="#dacda9" font-family="monospace" font-size="14">17</text>
+  <text x="1213" y="220" fill="#dacda9" font-family="monospace" font-size="14">18</text>
+  <text x="1264" y="220" fill="#dacda9" font-family="monospace" font-size="14">19</text>
+  <circle cx="1320" cy="216" r="20" fill="#ead9b7"/>
+  <text x="1313" y="221" fill="#30383f" font-family="monospace" font-size="14" font-weight="700">20</text>
+  <text x="1368" y="220" fill="#dacda9" font-family="monospace" font-size="14">21</text>
+  <text x="1419" y="220" fill="#dacda9" font-family="monospace" font-size="14">22</text>
+  <text x="1471" y="220" fill="#dacda9" font-family="monospace" font-size="14">23</text>
+  <circle cx="1272" cy="235" r="3.2" fill="#a39779"/>
+  <circle cx="1425" cy="235" r="3.2" fill="#a39779"/>
+  <circle cx="1477" cy="235" r="3.2" fill="#a39779"/>
+
+  <line x1="1138" y1="258" x2="1532" y2="258" stroke="#52595d" stroke-width="1"/>
+  <text x="1140" y="288" fill="#b9ad8d" font-family="monospace" font-size="13" font-weight="700">TODAY — 20 AUG · 2</text>
+
+  <text x="1148" y="317" fill="#e6d9b8" font-family="monospace" font-size="18" font-weight="700">09:30</text>
+  <text x="1204" y="317" fill="#e7dcc8" font-family="monospace" font-size="17">Client follow-up notes</text>
+  <text x="1204" y="338" fill="#a79d88" font-family="monospace" font-size="12">Ops · 🍅 2 · 45m logged</text>
+  <circle cx="1517" cy="326" r="7" fill="#6b6860"/>
+
+  <text x="1148" y="375" fill="#e6d9b8" font-family="monospace" font-size="18" font-weight="700">11:00</text>
+  <text x="1204" y="375" fill="#e7dcc8" font-family="monospace" font-size="17">Marketplace submission polish</text>
+  <text x="1204" y="396" fill="#a79d88" font-family="monospace" font-size="12">Publishing · 🍅 1 · 20m logged</text>
+  <circle cx="1517" cy="384" r="7" fill="#6b6860"/>
+
+  <line x1="1138" y1="428" x2="1532" y2="428" stroke="#52595d" stroke-width="1"/>
+  <text x="1140" y="456" fill="#df7777" font-family="monospace" font-size="13" font-weight="700">OVERDUE (1)</text>
+  <text x="1148" y="483" fill="#f08b84" font-family="monospace" font-size="17">Weekly review cleanup</text>
+  <text x="1148" y="502" fill="#9f9581" font-family="monospace" font-size="12">2026-08-19 · Planning</text>
+  <circle cx="1517" cy="492" r="7" fill="#6b6860"/>
+
+  <line x1="1138" y1="530" x2="1532" y2="530" stroke="#52595d" stroke-width="1"/>
+  <text x="1140" y="558" fill="#b9ad8d" font-family="monospace" font-size="13" font-weight="700">CHECKLISTS</text>
+  <text x="1140" y="584" fill="#e7dcc8" font-family="monospace" font-size="16" font-weight="700">Weekly review</text>
+  <rect x="1140" y="596" width="326" height="5" fill="#696d6f"/>
+  <rect x="1140" y="596" width="177" height="5" fill="#ead9b7"/>
+  <text x="1140" y="620" fill="#9f9581" font-family="monospace" font-size="12">3 done · 2 open</text>
+  <text x="1140" y="648" fill="#e7dcc8" font-family="monospace" font-size="16" font-weight="700">Launch plan</text>
+  <rect x="1140" y="660" width="326" height="5" fill="#696d6f"/>
+  <rect x="1140" y="660" width="144" height="5" fill="#ead9b7"/>
+  <text x="1140" y="684" fill="#9f9581" font-family="monospace" font-size="12">2 done · 2 open</text>
+
+  <text x="1182" y="742" fill="#a7997b" font-family="monospace" font-size="12">Read-only · /path/to/cockpit-board-vault</text>
 </svg>
