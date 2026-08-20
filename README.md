@@ -51,3 +51,15 @@ Or copy the directory into `~/.config/omarchy/plugins/andreconde.cockpit/` and r
 omarchy-shell shell rescanPlugins
 omarchy plugin enable andreconde.cockpit
 ```
+
+## Remove
+
+```bash
+omarchy plugin remove andreconde.cockpit
+```
+
+If you installed it by copying the directory manually, delete `~/.config/omarchy/plugins/andreconde.cockpit/`, then run:
+
+```bash
+omarchy-shell shell rescanPlugins
+```
