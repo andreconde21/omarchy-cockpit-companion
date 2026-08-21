@@ -39,6 +39,12 @@ Panel {
 
   function alpha(c, a) { return Qt.rgba(c.r, c.g, c.b, a) }
   function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)) }
+  function plainText(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+  }
 
   // Ticks once a second ONLY while the pomodoro is running; nothing else in
   // the plugin does per-second work. An idle open panel is fully quiescent.
@@ -557,7 +563,7 @@ Panel {
     slotSize: Style.bar.statusSlot
     active: root.overdueCount > 0
     tooltipText: root.pomoRunning && root.pomoTaskTitle !== ""
-      ? "🍅 " + root.pomoTaskTitle + " — " + root.pomoFormat(root.pomoLeftMs)
+      ? "🍅 " + root.plainText(root.pomoTaskTitle) + " — " + root.pomoFormat(root.pomoLeftMs)
       : (root.overdueCount > 0
         ? root.overdueCount + " overdue · " + root.todayTasks.length + " due today"
         : (root.todayTasks.length > 0 ? root.todayTasks.length + " due today" : "Cockpit"))
@@ -717,7 +723,8 @@ Panel {
             Text {
               width: parent.width
               visible: root.pomoTaskTitle !== ""
-              text: "🍅 " + root.pomoTaskTitle
+              text: "🍅 " + root.plainText(root.pomoTaskTitle)
+              textFormat: Text.PlainText
               color: root.foreground
               font.family: root.fontFamily
               font.pixelSize: Style.font.bodySmall
@@ -1062,7 +1069,8 @@ Panel {
 
                   Text {
                     width: parent.width
-                    text: meterItem.modelData ? String(meterItem.modelData.label || "") : ""
+                    text: meterItem.modelData ? root.plainText(meterItem.modelData.label || "") : ""
+                    textFormat: Text.PlainText
                     color: root.foreground
                     font.family: root.fontFamily
                     font.pixelSize: Style.font.caption
@@ -1107,7 +1115,8 @@ Panel {
                     x: Style.space(6)
                     width: parent.width - Style.space(12)
                     text: meterItem.modelData && meterItem.modelData.body
-                      ? String(meterItem.modelData.body) : "No notes."
+                      ? root.plainText(meterItem.modelData.body) : "No notes."
+                    textFormat: Text.PlainText
                     color: root.dim
                     font.family: root.fontFamily
                     font.pixelSize: Style.font.caption
@@ -1121,7 +1130,8 @@ Panel {
           Text {
             width: parent.width
             topPadding: Style.space(2)
-            text: "Read-only · " + root.vaultDir.replace(/^\/home\/[^\/]+/, "~")
+            text: "Read-only · " + root.plainText(root.vaultDir.replace(/^\/home\/[^\/]+/, "~"))
+            textFormat: Text.PlainText
             color: root.dim
             font.family: root.fontFamily
             font.pixelSize: Style.font.caption
@@ -1192,7 +1202,8 @@ Panel {
         anchors.top: parent.top
         width: taskRow.showTime ? Style.space(44) : 0
         visible: taskRow.showTime
-        text: taskRow.timeText !== "" ? taskRow.timeText : "—"
+        text: taskRow.timeText !== "" ? root.plainText(taskRow.timeText) : "—"
+        textFormat: Text.PlainText
         color: taskRow.timeText !== "" ? root.foreground : root.dim
         font.family: root.fontFamily
         font.pixelSize: Style.font.bodySmall
@@ -1205,7 +1216,8 @@ Panel {
         anchors.right: pomoButton.left
         anchors.top: parent.top
         anchors.rightMargin: Style.space(4)
-        text: taskRow.task ? String(taskRow.task.title || "") : ""
+        text: taskRow.task ? root.plainText(taskRow.task.title || "") : ""
+        textFormat: Text.PlainText
         color: taskRow.urgentRow ? root.urgent : root.foreground
         font.family: root.fontFamily
         font.pixelSize: Style.font.bodySmall
@@ -1219,11 +1231,12 @@ Panel {
         anchors.top: taskTitle.bottom
         anchors.rightMargin: Style.space(4)
         text: {
-          var meta = taskRow.task ? root.taskMeta(taskRow.task, taskRow.showDate) : ""
+          var meta = taskRow.task ? root.plainText(root.taskMeta(taskRow.task, taskRow.showDate)) : ""
           if (!taskRow.showTime && taskRow.timeText !== "")
-            meta = meta === "" ? taskRow.timeText : taskRow.timeText + " · " + meta
+            meta = meta === "" ? root.plainText(taskRow.timeText) : root.plainText(taskRow.timeText) + " · " + meta
           return meta
         }
+        textFormat: Text.PlainText
         visible: text !== ""
         color: root.dim
         font.family: root.fontFamily
@@ -1274,7 +1287,8 @@ Panel {
       anchors.rightMargin: Style.space(6)
       anchors.topMargin: Style.space(4)
       visible: taskRow.expanded
-      text: taskRow.body !== "" ? taskRow.body : "No notes."
+      text: taskRow.body !== "" ? root.plainText(taskRow.body) : "No notes."
+      textFormat: Text.PlainText
       color: root.dim
       font.family: root.fontFamily
       font.pixelSize: Style.font.caption
